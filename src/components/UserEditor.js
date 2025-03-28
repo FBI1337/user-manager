@@ -4,14 +4,14 @@ import { updateUser } from '../store/store';
 import placeholder from '../assets/avatar-placeholder.png';
 import './UserEditor.css';
 
-const UserEditor = () => {
+const UserEditor = ({ isListLoaded }) => {
     const selectedUser = useSelector(state => state.users.selectedUser);
     const dispatch = useDispatch();
     const [user, setUser ] = useState(selectedUser);
 
     useEffect(() => { setUser(selectedUser); }, [selectedUser]);
 
-    
+    if (!isListLoaded) return <div className='wrapperText'></div>
     if (!user) return <div className='wrapperText'><h2>Выберите пользователя</h2></div>
 
   return (
