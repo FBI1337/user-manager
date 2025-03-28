@@ -5,7 +5,7 @@ import { selectUser } from '../store/store';
 import placeholder from '../assets/avatar-placeholder.png';
 import './UserList.css';
 
-const UserList = () => {
+const UserList = ({ onListLoaded }) => {
 
     const users = useSelector(state => state.users.list);
     const dispatch = useDispatch();
@@ -16,6 +16,11 @@ const UserList = () => {
       window.addEventListener('resize', updateHeight);
       return () => window.removeEventListener('resize', updateHeight);
     }, []);
+
+
+    useEffect (() => {
+      if (users.length > 0) onListLoaded();
+    }, [users, onListLoaded])
 
 
     const Row = ({ index, style }) => (

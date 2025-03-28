@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setUsers } from './store/store';
 import { generateUsers } from './mockData';
@@ -9,6 +9,8 @@ import './Styles/App.css';
 const App = () => {
   const dispatch = useDispatch();
 
+  const [isListLoaded, setIsListLoaded] = useState(false)
+
   useEffect(() => {
     const users = generateUsers(1000000);
     dispatch(setUsers(users));
@@ -16,8 +18,8 @@ const App = () => {
 
   return (
     <div className="wrapper">
-      <UserList />
-      <UserEditor />
+      <UserList onListLoaded={() => setIsListLoaded(true)}/>
+      <UserEditor isListLoaded={isListLoaded} />
     </div>
   );
 };
