@@ -1,0 +1,72 @@
+.wrapperEditor {
+    flex: 1;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.userName {
+    width: 50%;
+}
+
+.editor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.avatarIconEditor {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+
+.writing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 0px 0px 5px;
+}
+
+.userName {
+    display: block;
+    width: 25%;
+    margin: 5px 0;
+    padding: 8px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 5px 0;
+}
+
+
+.line label {
+    width: 150px;
+    max-width: 150px;
+    text-align: left;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+
+.inputEditor {
+    display: block;
+    width: 80%;
+    margin: 5px;
+    padding: 8px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

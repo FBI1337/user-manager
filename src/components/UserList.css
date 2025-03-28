@@ -1,0 +1,22 @@
+.userListItem {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.avatarIcon {
+    height: 20px;
+    width: 20px;
+    margin: 0px 10px 0px 10px;
+}
+
+.userListItem:hover {
+    background-color: #f0f0f0;
+}
+
+.wrapperList {
+    
+    overflow-x: hidden;
+}
