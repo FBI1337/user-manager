@@ -11,7 +11,7 @@ const UserEditor = ({ isListLoaded }) => {
 
     useEffect(() => { setUser(selectedUser); }, [selectedUser]);
 
-    if (!isListLoaded) return <div className='wrapperText'></div>
+    if (!isListLoaded) return <div className='Load'><h2>Загрузка пользователей....</h2></div>
     if (!user) return <div className='wrapperText'><h2>Выберите пользователя</h2></div>
 
   return (
