@@ -4,6 +4,10 @@
     background: #fafafa;
 }
 
+.wrapperText {
+    margin: 0px 0px 0px 23px;
+}
+
 .userName {
     width: 50%;
 }

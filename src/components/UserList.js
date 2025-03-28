@@ -17,6 +17,7 @@ const UserList = () => {
       return () => window.removeEventListener('resize', updateHeight);
     }, []);
 
+
     const Row = ({ index, style }) => (
         <div
         className="userListItem"

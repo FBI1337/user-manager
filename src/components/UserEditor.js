@@ -5,14 +5,14 @@ import placeholder from '../assets/avatar-placeholder.png';
 import './UserEditor.css';
 
 const UserEditor = () => {
-
     const selectedUser = useSelector(state => state.users.selectedUser);
     const dispatch = useDispatch();
     const [user, setUser ] = useState(selectedUser);
 
     useEffect(() => { setUser(selectedUser); }, [selectedUser]);
 
-    if (!user) return <div>Выберите пользователя</div>
+    
+    if (!user) return <div className='wrapperText'><h2>Выберите пользователя</h2></div>
 
   return (
     <div className='wrapperEditor'>
